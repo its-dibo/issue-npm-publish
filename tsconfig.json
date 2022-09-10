@@ -1,0 +1,28 @@
+{
+  "compileOnSave": false,
+  "compilerOptions": {
+    "baseUrl": "./",
+    "outDir": "./dist/out-tsc",
+    "target": "es2017",
+    "module": "es2020",
+    "lib": ["es2020", "dom", "dom.iterable"],
+    "types": ["node"],
+    "typeRoots": ["node_modules/@types"],
+    "allowJs": false,
+    "skipLibCheck": true
+  },
+  "exclude": ["node_modules", "dist"],
+  "ts-node": {
+    "compilerOptions": {
+      "sourceMap": false,
+      "module": "commonjs"
+    },
+    "require": ["tsconfig-paths/register"],
+    "transpileOnly": true,
+    "moduleTypes": {
+      "**/webpack.config.ts": "cjs",
+      "**/webpack.config.*.ts": "cjs"
+    }
+  },
+  "devDependencies": {}
+}

@@ -1,0 +1,17 @@
+{
+  "name": "issue-npm-publish",
+  "version": "0.0.1-temp",
+  "private": false,
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "start": "webpack && shx cp package.json dist && npm pack"
+  },
+  "devDependencies": {
+    "@types/node": "^18.7.16",
+    "ts-loader": "^9.3.1",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  }
+}
