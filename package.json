@@ -6,10 +6,13 @@
     "dist"
   ],
   "scripts": {
-    "start": "webpack && shx cp package.json dist && npm pack"
+    "start": "webpack && shx cp package.json dist && json -I -f dist/package.json -e this.files=[];this.devDependencies=undefined;\"this.scripts.start='npm pack'\" && npm pack --prefix=dist",
+    "tmp":"npm start --prefix=dist"
+
   },
   "devDependencies": {
     "@types/node": "^18.7.16",
+    "json": "^11.0.0",
     "ts-loader": "^9.3.1",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0"
